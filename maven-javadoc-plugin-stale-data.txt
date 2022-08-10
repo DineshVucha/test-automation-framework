@@ -1,0 +1,27 @@
+cmd.exe
+/X
+/C
+""C:\Program Files\Java\jdk-11.0.15\bin\javadoc.exe" @options @packages"
+D:\test1\Canvas-master\target\apidocs\allclasses-index.html = 1659928493947
+D:\test1\Canvas-master\target\apidocs\allclasses.html = 1659928493963
+D:\test1\Canvas-master\target\apidocs\allpackages-index.html = 1659928493951
+D:\test1\Canvas-master\target\apidocs\constant-values.html = 1659928493076
+D:\test1\Canvas-master\target\apidocs\deprecated-list.html = 1659928493959
+D:\test1\Canvas-master\target\apidocs\element-list = 1659928492698
+D:\test1\Canvas-master\target\apidocs\help-doc.html = 1659928493987
+D:\test1\Canvas-master\target\apidocs\index-all.html = 1659928493881
+D:\test1\Canvas-master\target\apidocs\index.html = 1659928493974
+D:\test1\Canvas-master\target\apidocs\member-search-index.js = 1659928493859
+D:\test1\Canvas-master\target\apidocs\member-search-index.zip = 1659928493869
+D:\test1\Canvas-master\target\apidocs\options = 1659928474701
+D:\test1\Canvas-master\target\apidocs\overview-summary.html = 1659928493979
+D:\test1\Canvas-master\target\apidocs\overview-tree.html = 1659928493744
+D:\test1\Canvas-master\target\apidocs\package-search-index.js = 1659928493842
+D:\test1\Canvas-master\target\apidocs\package-search-index.zip = 1659928493851
+D:\test1\Canvas-master\target\apidocs\packages = 1659928474703
+D:\test1\Canvas-master\target\apidocs\script.js = 1659928494034
+D:\test1\Canvas-master\target\apidocs\search.js = 1659928494055
+D:\test1\Canvas-master\target\apidocs\serialized-form.html = 1659928493088
+D:\test1\Canvas-master\target\apidocs\stylesheet.css = 1659928494003
+D:\test1\Canvas-master\target\apidocs\type-search-index.js = 1659928493853
+D:\test1\Canvas-master\target\apidocs\type-search-index.zip = 1659928493855
