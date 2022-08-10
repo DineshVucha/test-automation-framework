@@ -1,0 +1,87 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9312300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I load environment property file \"uat\" into global property map for lbu \"sg\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "uat",
+                  "offset": 34
+                },
+                {
+                  "val": "sg",
+                  "offset": 73
+                }
+              ],
+              "location": "FileHandlingSteps.loadEnvironmentPropertyFile(String,String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2022-07-25T04:11:43.334Z",
+        "line": 7,
+        "name": "Login to Web portal",
+        "description": "",
+        "id": "login-to-web-app;login-to-web-portal",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2239974601,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I launch browser application \"https://ultimateqa.com/automation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://ultimateqa.com/automation",
+                  "offset": 30
+                }
+              ],
+              "location": "UISteps.launchBrowserApplication(String)"
+            },
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test_web"
+          }
+        ]
+      }
+    ],
+    "name": "Login to web app",
+    "description": "",
+    "id": "login-to-web-app",
+    "keyword": "Feature",
+    "uri": "classpath:features/Web.feature",
+    "tags": [
+      {
+        "name": "@test_web",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
