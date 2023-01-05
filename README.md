@@ -1,26 +1,26 @@
-# Getting started with TAP
-Description: TAP is a suite of tools that provides a single platform to write Test Automation scripts in cucumber BDD approach for different types of application(Web, Mobile), API, Databases, PDF comparison etc.
+# Getting started with TAF
+Description: TAF is a suite of tools that provides a single platform to write Test Automation scripts in cucumber BDD approach for different types of application(Web, Mobile), API, Databases, PDF comparison etc.
              
     This has been developed keeping in mind that testers do not have to invest time in setting up the framework and can straight forward start writing their test scripts with minimal knowledge of automation/programming language.
-    The TAP architecture is also quite simple and easy for new users to understand and start using it of their own.
+    The TAF architecture is also quite simple and easy for new users to understand and start using it of their own.
 
-## How TAP is different from other open source test automation framework/tool
+## How TAF is different from other open source test automation framework/tool
     1. Configuration is simple,minimal and easy to use as mentioned below. User can setup the repo using template project within few hours and start testing.
-    2. No extra layer of complexity for writing test scripts. You can directly use the class from TAP to write your own scripts
+    2. No extra layer of complexity for writing test scripts. You can directly use the class from TAF to write your own scripts
     3. Template projects are provided to easy start your automation 
     4. All the driver waits are handled internally and dynamically and hence less chances of script failure incase user does not speficy that
     5. Supports writing of Unit/Integration/System/End to End/Acceptance tests using Cucumber BDD / testng
     6. It does not require extensive training or document reference for writing scripts
-    7. There is no need to maintain driver version to support the browsers. TAP will automatically download the required browser driver for different platform e.g: max/windows/linux
-    8. There are other features provided by TAP which can be witnessed while using TAP
+    7. There is no need to maintain driver version to support the browsers. TAF will automatically download the required browser driver for different platform e.g: max/windows/linux
+    8. There are other features provided by TAF which can be witnessed while using TAF
 
 # HOME
 
-[TAP Capabilities](#TAP-capabilities)
+[TAF Capabilities](#TAF-capabilities)
 
 [Development environment setup](#development-environment-setup)
 
-[How to use TAP steps to write test scenarios without glue code](#how-to-use-TAP-steps-to-write-test-scenarios-without-glue-code)
+[How to use TAF steps to write test scenarios without glue code](#how-to-use-TAF-steps-to-write-test-scenarios-without-glue-code)
 
 [Config Steps](#config-steps)
 
@@ -55,7 +55,7 @@ Description: TAP is a suite of tools that provides a single platform to write Te
 [Upcoming features](#upcoming-features)
 
 
-# TAP Capabilities
+# TAF Capabilities
 1. Web application automation using selenium
 2. Mobile app automation using selenium and appium
 3. GraphQL, Rest API, WebSocket API automation
@@ -65,11 +65,11 @@ Description: TAP is a suite of tools that provides a single platform to write Te
 7. Reports in html and pdf format
 8. Support to run Mobile app in AWS device farm
 9. Support to run web app through CICD pipelines
-10. Throw custom exceptions in your project using TAPException class
+10. Throw custom exceptions in your project using TAFException class
 11. Global properties/variables map which can be accessed anywhere in the entire test suite during execution. Refer attached example projects for this reference 
 12. Inbuilt cucumber BDD steps to support Web/Mobile/API automation to ease the automation writing. Example projects attached are created using inbuilt steps for reference
-13. TAP classes can be accessed by either using sprint annotation or creating the required class object. Example projects attached are created using sprint annotation for reference
-14. Project can be configured to take screen-shot on failure or when ever required using TAP provided method
+13. TAF classes can be accessed by either using sprint annotation or creating the required class object. Example projects attached are created using sprint annotation for reference
+14. Project can be configured to take screen-shot on failure or when ever required using TAF provided method
 
 [Back-To-Home](#home)
 # Development environment setup
@@ -92,7 +92,7 @@ Description: TAP is a suite of tools that provides a single platform to write Te
    4. Add all the above path into system Path variable
 
 [Back-To-Home](#home)
-# How to use TAP steps to write test scenarios without glue code
+# How to use TAF steps to write test scenarios without glue code
 1. Create maven project
 2. Add Canvas dependency as below in your pom.xml file 
 
@@ -111,7 +111,7 @@ Description: TAP is a suite of tools that provides a single platform to write Te
               @CucumberOptions(
                       monochrome = true,
                       features = "classpath:features",
-                      glue = {"com/mobile/template/stepdef", "com/automation/platform/tapsteps"},
+                      glue = {"com/mobile/template/stepdef", "com/automation/platform/TAFsteps"},
                       tags = {"@test_tat", "~@ignore"},
 
                       plugin = {"pretty",
@@ -133,10 +133,10 @@ Description: TAP is a suite of tools that provides a single platform to write Te
                   public void setUpEnvironmentToTest() {
                       // write if anything needs to be set up once before tests run. e.g. connection to database
                       TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
-                      TapBeansLoad.setConfigClass(CucumberRunner.class);
-                      TapBeansLoad.init();
-                      configvariable = (Configvariable) TapBeansLoad.getBean(Configvariable.class);
-                      seleniumBase = (SeleniumBase) TapBeansLoad.getBean(SeleniumBase.class);
+                      TAFBeansLoad.setConfigClass(CucumberRunner.class);
+                      TAFBeansLoad.init();
+                      configvariable = (Configvariable) TAFBeansLoad.getBean(Configvariable.class);
+                      seleniumBase = (SeleniumBase) TAFBeansLoad.getBean(SeleniumBase.class);
                       seleniumBase.initializeSeleniumFramework();  
               
                   }
@@ -146,7 +146,7 @@ Description: TAP is a suite of tools that provides a single platform to write Te
                       // close if something enabled in @before suite. e.g. closing connection to DB, driver
                       LOGGER.info("Copying and generating reports....");
                       String deviceFarmLogDir = System.getenv("DEVICEFARM_LOG_DIR");
-                      TapReporting.generateReportForJsonFiles(deviceFarmLogDir);
+                      TAFReporting.generateReportForJsonFiles(deviceFarmLogDir);
                       
                       LOGGER.info("Quiting driver if needed....");
                       if (SeleniumBase.driver != null) {
@@ -154,7 +154,7 @@ Description: TAP is a suite of tools that provides a single platform to write Te
                       }
 
                       FileReaderUtil.deleteFile("reports/mobile-app-test-results.pdf");
-                      TapReporting.detailedReport("reports/cucumber/cucumber.json", "mobile-app");
+                      TAFReporting.detailedReport("reports/cucumber/cucumber.json", "mobile-app");
 
                   }
                 }
@@ -486,7 +486,7 @@ Example:
 
 [Back-To-Home](#home)
 # How to create custom steps using Page object model
-While writing function/regression scenarios if you come across in situation where you need to write a custom step apart from the default steps in TAP. 
+While writing function/regression scenarios if you come across in situation where you need to write a custom step apart from the default steps in TAF. 
 Follow below guidelines.
 
  
@@ -518,7 +518,7 @@ LoginPage:
 
 [Back-To-Home](#home)
 # Passing data between cucumber scenarios
-  TAP provides its customized simple way to pass the data between scenarios / steps in cucumber feature file  
+  TAF provides its customized simple way to pass the data between scenarios / steps in cucumber feature file  
   Lets see this in example: In the below example "LOGIN_TOKEN" is the variable created in first scenario which contains the token value which is required to access other endpoint in rest of the scenarios
 
      Scenario: Get token from login api
@@ -548,7 +548,7 @@ here  I get response value for node "data.login.token" into variable "LOGIN_TOKE
         @When("^I get response value for node \"([^\"]*)\" into variable \"([^\"]*)\"$")
         public void getResponseNodeData(String jsonPath, String variable) {
             String jsonP = configvariable.expandValue(jsonPath);
-            String responseVal = httpClientApi.getJsonPathStringValue(jsonP);
+            String responseVal = httpClienTAFi.getJsonPathStringValue(jsonP);
             configvariable.setStringVariable(responseVal, variable);
         }
 
@@ -558,18 +558,18 @@ And  I set api header key "Authorization" and value "Bearer ${LOGIN_TOKEN}" step
         public void setHeaders(String key, String value) {
             String headerKey = configvariable.expandValue(key);
             String headerValue = configvariable.expandValue(value);
-            httpClientApi.setSendHeaders(headerKey, headerValue);
+            httpClienTAFi.setSendHeaders(headerKey, headerValue);
         }
 
 [Back-To-Home](#home)
 # Adding Desired Capability to Appium or Web driver
-TAP provides user an option to add the required capability for the driver before invoking the driver
+TAF provides user an option to add the required capability for the driver before invoking the driver
     
-    IOS/Android: private TapDriver tapDriver = new TapDriver();
-                tapDriver.capabilities.setCapability("newCommandTimeout", 10000);
+    IOS/Android: private TAFDriver TAFDriver = new TAFDriver();
+                TAFDriver.capabilities.setCapability("newCommandTimeout", 10000);
 
-    Web App: private TapDriver tapDriver = new TapDriver();
-            tapDriver.chromeOptions.addArguments("--incognito");
+    Web App: private TAFDriver TAFDriver = new TAFDriver();
+            TAFDriver.chromeOptions.addArguments("--incognito");
 
 [Back-To-Home](#home)
 # Download specific browser driver
