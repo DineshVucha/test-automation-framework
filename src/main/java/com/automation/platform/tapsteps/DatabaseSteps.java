@@ -7,7 +7,7 @@ import com.automation.platform.database.DatabaseMethods;
 import com.automation.platform.exception.TapException;
 import com.automation.platform.exception.TapExceptionType;
 import cucumber.api.DataTable;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

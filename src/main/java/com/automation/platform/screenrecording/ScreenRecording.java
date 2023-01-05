@@ -1,18 +1,4 @@
-package com.automation.platform.screenRecording;
-
-import java.awt.AWTException;
-import java.awt.Dimension;
-import java.awt.GraphicsConfiguration;
-import java.awt.GraphicsEnvironment;
-import java.awt.Rectangle;
-import java.awt.Toolkit;
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-import java.util.TimeZone;
+package com.automation.platform.screenrecording;
 
 import org.monte.media.Format;
 import org.monte.media.FormatKeys.MediaType;
@@ -20,7 +6,19 @@ import org.monte.media.Registry;
 import org.monte.media.math.Rational;
 import org.monte.screenrecorder.ScreenRecorder;
 
-import static org.monte.media.AudioFormatKeys.*;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.TimeZone;
+
+import static org.monte.media.AudioFormatKeys.EncodingKey;
+import static org.monte.media.AudioFormatKeys.FrameRateKey;
+import static org.monte.media.AudioFormatKeys.KeyFrameIntervalKey;
+import static org.monte.media.AudioFormatKeys.MIME_AVI;
+import static org.monte.media.AudioFormatKeys.MediaTypeKey;
+import static org.monte.media.AudioFormatKeys.MimeTypeKey;
 import static org.monte.media.VideoFormatKeys.*;
 
 
@@ -75,7 +73,6 @@ public class ScreenRecording extends ScreenRecorder {
                 null, file, methodName);
 
         screenRecorder.start();
-
     }
 
     public static void stopRecording() throws Exception {

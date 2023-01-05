@@ -1,8 +1,5 @@
 package com.automation.platform.database;
 
-import java.sql.Connection;
-import java.util.Map;
-
 import com.automation.platform.config.Configvariable;
 import com.automation.platform.config.TapBeansLoad;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,10 +8,12 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import java.sql.Connection;
+
 @ComponentScan(basePackages = {"com.automation.platform"})
 @Configuration
 public class DataBaseMethodsTest {
-    private DatabaseMethods databaseMethods = new DatabaseMethods();
+    private DatabaseMethods databaseMet = new DatabaseMethods();
     private Configvariable configvariable;
 
     @BeforeSuite
@@ -22,13 +21,13 @@ public class DataBaseMethodsTest {
         TapBeansLoad.setConfigClass(DataBaseMethodsTest.class);
         TapBeansLoad.init();
         configvariable = (Configvariable) TapBeansLoad.getBean(Configvariable.class);
-        databaseMethods = (DatabaseMethods) TapBeansLoad.getBean(DatabaseMethods.class);
+        databaseMet = (DatabaseMethods) TapBeansLoad.getBean(DatabaseMethods.class);
     }
 
     @Test
     public void testConnectToSqlite() {
         String filePath = "target/test-classes/testFile/test";
-        Connection con = databaseMethods.connectToSqlite(filePath);
+        Connection con = databaseMet.connectToSqlite(filePath);
         Assert.assertNotNull(con);
     }
 

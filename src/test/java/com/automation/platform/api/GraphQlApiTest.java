@@ -1,18 +1,17 @@
 package com.automation.platform.api;
 
+import com.automation.platform.config.Configvariable;
+import com.automation.platform.config.TapBeansLoad;
 import com.automation.platform.database.DataBaseMethodsTest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-
-import java.io.File;
-
-import com.automation.platform.config.Configvariable;
-import com.automation.platform.config.TapBeansLoad;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+
+import java.io.File;
 
 @ComponentScan(basePackages = {"com.automation.tap"})
 @Configuration

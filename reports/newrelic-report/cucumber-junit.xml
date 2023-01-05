@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="30.939">
-<testcase classname="Login to web app" name="Login to Web portal" time="30.606">
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="126.934">
+<testcase classname="Login to web app" name="Login to Web portal" time="126.481">
 <system-out><![CDATA[Given I load environment property file "uat" into global property map for lbu "sg".passed
 Given I launch browser application "https://ultimateqa.com/automation"......passed
 ]]></system-out>

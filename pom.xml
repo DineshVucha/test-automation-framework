@@ -2,21 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.rituagrawal1384</groupId>
-    <artifactId>test-automation-canvas</artifactId>
-    <version>1.0.4-SNAPSHOT</version>
+    <!--commented below-->
+    <groupId>io.github.dineshvucha</groupId>
+    <artifactId>test-automation-framework</artifactId>
+    <version>2.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Canvas</name>
-
-    <description>This library will ease the test automation process using cucumber. And the testers no need to write
-        complex code for data handling and other utilities
-    </description>
-    <url>https://github.com/RituAgrawal1384/Canvas</url>
-
-    <organization>
-        <url>https://github.com/RituAgrawal1384/Canvas</url>
-        <name>Canvas</name>
-    </organization>
+    <name>TAF</name>
 
     <licenses>
         <license>
@@ -24,34 +15,6 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
         </license>
     </licenses>
-
-    <developers>
-        <developer>
-            <name>Ritu Agrawal</name>
-            <email>agrawal.ritu6@gmail.com</email>
-            <organization>Canvas</organization>
-            <organizationUrl>https://github.com/RituAgrawal1384/Canvas</organizationUrl>
-            <timezone>UTC+08:00</timezone>
-        </developer>
-    </developers>
-
-    <scm>
-        <connection>scm:git:git://github.com/RituAgrawal1384/Canvas.git</connection>
-        <developerConnection>scm:git:git@github.com:RituAgrawal1384/Canvas.git</developerConnection>
-        <url>https://github.com/RituAgrawal1384/Canvas</url>
-        <tag>test-automation-canvas-1.0.0</tag>
-    </scm>
-
-<!--    <distributionManagement>-->
-<!--        <snapshotRepository>-->
-<!--            <id>ossrh</id>-->
-<!--            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>-->
-<!--        </snapshotRepository>-->
-<!--        <repository>-->
-<!--            <id>ossrh</id>-->
-<!--            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
-<!--        </repository>-->
-<!--    </distributionManagement>-->
 
     <properties>
         <additionalparam>-Xdoclint:none</additionalparam>
@@ -140,63 +103,6 @@
 
                 </configuration>
             </plugin>
-
-            <!--            <plugin>-->
-            <!--                <groupId>org.apache.maven.plugins</groupId>-->
-            <!--                <artifactId>maven-jar-plugin</artifactId>-->
-            <!--                <version>2.6</version>-->
-            <!--                <configuration>-->
-            <!--                    <excludes>-->
-            <!--                        <exclude>**/chromedriver</exclude>-->
-            <!--                    </excludes>-->
-            <!--                </configuration>-->
-            <!--                <executions>-->
-            <!--                    <execution>-->
-            <!--                        <goals>-->
-            <!--                            <goal>test-jar</goal>-->
-            <!--                        </goals>-->
-            <!--                    </execution>-->
-            <!--                </executions>-->
-            <!--            </plugin>-->
-
-            <!--            <plugin>-->
-            <!--                <groupId>org.apache.maven.plugins</groupId>-->
-            <!--                <artifactId>maven-dependency-plugin</artifactId>-->
-            <!--                <version>2.10</version>-->
-            <!--                <executions>-->
-            <!--                    <execution>-->
-            <!--                        <id>copy-dependencies</id>-->
-            <!--                        <phase>package</phase>-->
-            <!--                        <goals>-->
-            <!--                            <goal>copy-dependencies</goal>-->
-            <!--                        </goals>-->
-            <!--                        <configuration>-->
-            <!--                            <outputDirectory>${project.build.directory}/dependency-jars/</outputDirectory>-->
-            <!--                        </configuration>-->
-            <!--                    </execution>-->
-            <!--                </executions>-->
-            <!--            </plugin>-->
-
-            <!--            <plugin>-->
-            <!--                <artifactId>maven-assembly-plugin</artifactId>-->
-            <!--                <version>2.5.4</version>-->
-            <!--                <executions>-->
-            <!--                    <execution>-->
-            <!--                        <phase>package</phase>-->
-            <!--                        <goals>-->
-            <!--                            <goal>single</goal>-->
-            <!--                        </goals>-->
-            <!--                        <configuration>-->
-            <!--                            <finalName>zip-with-dependencies</finalName>-->
-            <!--                            <appendAssemblyId>false</appendAssemblyId>-->
-            <!--                            <descriptors>-->
-            <!--                                <descriptor>src/main/assembly/zip.xml</descriptor>-->
-            <!--                            </descriptors>-->
-            <!--                        </configuration>-->
-            <!--                    </execution>-->
-            <!--                </executions>-->
-            <!--            </plugin>-->
-
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -251,18 +157,6 @@
                 </dependencies>
             </plugin>
 
-<!--            <plugin>-->
-<!--                <groupId>org.sonatype.plugins</groupId>-->
-<!--                <artifactId>nexus-staging-maven-plugin</artifactId>-->
-<!--                <version>1.6.7</version>-->
-<!--                <extensions>true</extensions>-->
-<!--                <configuration>-->
-<!--                    <serverId>ossrh</serverId>-->
-<!--                    <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>-->
-<!--                    <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -294,15 +188,40 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <!--            <plugin>-->
-            <!--                <groupId>org.apache.maven.plugins</groupId>-->
-            <!--                <artifactId>maven-site-plugin</artifactId>-->
-            <!--                <version>3.3</version>-->
-            <!--            </plugin>-->
-
         </plugins>
     </build>
+
+    <profiles>
+        <!-- GPG Signature on release -->
+        <profile>
+            <id>release-sign-artifacts</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${version.maven-gpg-plugin}</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
 
     <dependencies>
 
@@ -312,13 +231,6 @@
             <version>${lombok.version}</version>
             <scope>compile</scope>
         </dependency>
-
-        <!--        <dependency>-->
-        <!--            <groupId>log4j</groupId>-->
-        <!--            <artifactId>log4j</artifactId>-->
-        <!--            <version>${log4j.version}</version>-->
-        <!--        </dependency>-->
-
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-configuration2</artifactId>
@@ -361,80 +273,44 @@
             <version>${appium.version}</version>
         </dependency>
 
-                <dependency>
-                    <groupId>io.cucumber</groupId>
-                    <artifactId>cucumber-java</artifactId>
-                    <version>${cucumber.version}</version>
-                </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
 
-                <dependency>
-                    <groupId>io.cucumber</groupId>
-                    <artifactId>cucumber-junit</artifactId>
-                    <version>${cucumber.version}</version>
-                    <scope>test</scope>
-                </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>test</scope>
+        </dependency>
 
-                <dependency>
-                    <groupId>io.cucumber</groupId>
-                    <artifactId>cucumber-testng</artifactId>
-                    <version>${cucumber.version}</version>
-                </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
 
-                <dependency>
-                    <groupId>io.cucumber</groupId>
-                    <artifactId>cucumber-jvm</artifactId>
-                    <version>${cucumber.version}</version>
-                    <type>pom</type>
-                </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-jvm</artifactId>
+            <version>${cucumber.version}</version>
+            <type>pom</type>
+        </dependency>
 
-                <dependency>
-                    <groupId>io.cucumber</groupId>
-                    <artifactId>cucumber-picocontainer</artifactId>
-                    <version>${cucumber.version}</version>
-                    <scope>compile</scope>
-                </dependency>
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>${cucumber.version}</version>
+            <scope>compile</scope>
+        </dependency>
 
-                <dependency>
-                    <groupId>io.cucumber</groupId>
-                    <artifactId>cucumber-core</artifactId>
-                    <version>${cucumber.version}</version>
-                </dependency>
-
-
-        <!--        <dependency>-->
-<!--            <groupId>info.cukes</groupId>-->
-<!--            <artifactId>cucumber-java</artifactId>-->
-<!--            <version>1.2.5</version>-->
-<!--            <scope>compile</scope>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>io.cucumber</groupId>-->
-<!--            <artifactId>cucumber-jvm</artifactId>-->
-<!--            <version>2.0.0</version>-->
-<!--            <type>pom</type>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>info.cukes</groupId>-->
-<!--            <artifactId>cucumber-testng</artifactId>-->
-<!--            <version>1.2.5</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>info.cukes</groupId>-->
-<!--            <artifactId>cucumber-junit</artifactId>-->
-<!--            <version>1.2.5</version>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>info.cukes</groupId>-->
-<!--            <artifactId>cucumber-picocontainer</artifactId>-->
-<!--            <version>1.2.5</version>-->
-<!--            <scope>compile</scope>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
@@ -478,6 +354,24 @@
                     <artifactId>commons-logging</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>${spring.boot.version}</version>
         </dependency>
 
         <dependency>
@@ -603,13 +497,6 @@
             <artifactId>opencsv</artifactId>
             <version>${open.csv.version}</version>
         </dependency>
-
-        <!--        <dependency>-->
-        <!--            <groupId>com.fasterxml.jackson.core</groupId>-->
-        <!--            <artifactId>jackson-databind</artifactId>-->
-        <!--            <version>${jackson.databind.version}</version>-->
-        <!--        </dependency>-->
-
         <dependency>
             <groupId>com.squareup.okhttp3</groupId>
             <artifactId>okhttp</artifactId>
@@ -709,38 +596,32 @@
             <version>3.2.5</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.1.214</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.19.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.javers/javers-core -->
+        <dependency>
+            <groupId>org.javers</groupId>
+            <artifactId>javers-core</artifactId>
+            <version>5.9.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.testautomationguru.pdfutil/pdf-util -->
+        <dependency>
+            <groupId>com.testautomationguru.pdfutil</groupId>
+            <artifactId>pdf-util</artifactId>
+            <version>0.0.3</version>
+        </dependency>
 
     </dependencies>
-
-
-    <profiles>
-        <!-- GPG Signature on release -->
-        <profile>
-            <id>release-sign-artifacts</id>
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>true</value>
-                </property>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>${version.maven-gpg-plugin}</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>

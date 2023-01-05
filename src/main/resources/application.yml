@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    initialize: true
+    url: jdbc:h2:mem:test;INIT=RUNSCRIPT FROM 'classpath:schema.sql'
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  session:
+    jdbc:
+      initialize-schema: always
+  sql:
+    init:
+      mode: always
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      show-sql: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: false
